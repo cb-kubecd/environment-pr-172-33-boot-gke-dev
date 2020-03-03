@@ -1,0 +1,27 @@
+
+Showing logs for build [32mcb-kubecd-environment-pr-172-33-5t28c-9[0m stage [32mrelease[0m and container [32mstep-credential-initializer-p9tw2[0m
+{"level":"warn","ts":1583266078.7777088,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583266078.7786517,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mcb-kubecd-environment-pr-172-33-5t28c-9[0m stage [32mrelease[0m and container [32mstep-working-dir-initializer-rl5fc[0m
+{"level":"warn","ts":1583266079.2038772,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1583266079.2067776,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mcb-kubecd-environment-pr-172-33-5t28c-9[0m stage [32mrelease[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mcb-kubecd-environment-pr-172-33-5t28c-9[0m stage [32mrelease[0m and container [32mstep-git-source-cb-kubecd-environment-pr-172-33-5t28c-kj2s4[0m
+{"level":"warn","ts":1583266090.405794,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583266091.5571117,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/cb-kubecd/environment-pr-172-33-boot-gke-dev.git @ v0.0.9 in path /workspace/source"}
+
+Showing logs for build [32mcb-kubecd-environment-pr-172-33-5t28c-9[0m stage [32mrelease[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:76bca9abbf3fb8bceefc0f7da16ee554741fad98
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mcb-kubecd-environment-pr-172-33-5t28c-9[0m stage [32mrelease[0m and container [32mstep-validate-git[0m
+Git configured for user: jenkins-x-bot and email jenkins-x@googlegroups.com
+
+Showing logs for build [32mcb-kubecd-environment-pr-172-33-5t28c-9[0m stage [32mrelease[0m and container [32mstep-verify-preinstall[0m
+no need to reconnect to cluster
+error: resolving version stream ref: : failed to git fetch origin de25c2110db5c099c8f132bf08f4a19f21435f0d for repo: https://github.com/cloudbees/cloudbees-jenkins-x-versions.git in dir /builder/home/.**/jenkins-x-versions: failed to run 'git fetch origin de25c2110db5c099c8f132bf08f4a19f21435f0d' command in directory '/builder/home/.**/jenkins-x-versions', output: 'error: Server does not allow request for unadvertised object de25c2110db5c099c8f132bf08f4a19f21435f0d'
+[31m
+Pipeline failed on stage 'release' : container 'step-verify-preinstall'. The execution of the pipeline has stopped.[0m
